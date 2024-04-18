@@ -13,6 +13,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
+Route::get('/', [AllController::class, 'index']);
+
+Route::get('/confirm', [AllController::class, 'confirm']);
+
+Route::get('/thanks', [AllController::class, 'thanks']);
+
+
+Route::get('/admin', [AllController::class, 'admin']);
+
+
+Route::get('/register', [AllController::class, 'register']);
+
+
+Route::get('/login', [AllController::class, 'login']);
