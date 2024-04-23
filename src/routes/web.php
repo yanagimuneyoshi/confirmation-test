@@ -25,7 +25,7 @@ Route::get('/thanks', [AllController::class, 'thanks']);
 Route::get('/admin', [AllController::class, 'admin']);
 
 
-Route::get('/register', [AllController::class, 'register']);
+Route::get('/', [AllController::class, 'register']);
 
 
-Route::get('/login', [AllController::class, 'login']);
+Route::get('/', [AllController::class, 'login']);

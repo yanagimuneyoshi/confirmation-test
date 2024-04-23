@@ -19,5 +19,22 @@ class AllController extends Controller
     public function thanks()
     {
         return view('thanks');
+    } //
+
+    public function admin()
+    {
+        return view('admin');
+    } //
+
+    public function register()
+    {
+        return view('register');
     }//
+
+    public function login()
+    {
+        return view('login');
+    } //
+
+
 }

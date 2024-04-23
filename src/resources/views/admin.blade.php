@@ -46,17 +46,7 @@
         <th>操作</th>
       </tr>
     </thead>
-    <tbody>
-      @foreach($results as $result)
-      <tr>
-        <td>{{ $result->name }}</td>
-        <td>{{ $result->gender }}</td>
-        <td>{{ $result->email }}</td>
-        <td>{{ $result->inquiry_type }}</td>
-        <td><a href="{{ route('admin.show', $result->id) }}">詳細</a></td>
-      </tr>
-      @endforeach
-    </tbody>
+    
   </table>
 </body>
 
