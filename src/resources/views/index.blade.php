@@ -17,8 +17,8 @@
     </form>
     <form class="sex" required>
       <label for="sex-1">性別：</label>
-      <input type="radio" name="gender" value="男"> 男
-      <input type="radio" name="gender" value="女" checked> 女
+      <input type="radio" name="gender" value="男" checked> 男
+      <input type="radio" name="gender" value="女"> 女
       <input type="radio" name="gender" value="その他"> その他
     </form>
     <form class="mail" required>
@@ -27,9 +27,9 @@
     </form>
     <form class="tell" required>
       <label for="phone1">電話番号：</label>
-      <input type="text" id="phone1" name="phone1" maxlength="3" pattern="[0-9]{3}" required> -
-      <input type="text" id="phone2" name="phone2" maxlength="4" pattern="[0-9]{4}" required> -
-      <input type="text" id="phone3" name="phone3" maxlength="4" pattern="[0-9]{4}" required>
+      <input type="text" id="phone1" name="phone1" maxlength="3" pattern="[0-9]{3}" required placeholder="080"> -
+      <input type="text" id="phone2" name="phone2" maxlength="4" pattern="[0-9]{4}" required placeholder="123"> -
+      <input type="text" id="phone3" name="phone3" maxlength="4" pattern="[0-9]{4}" required placeholder="4567">
     </form>
     <form class="address" required>
       <label for="address">住所：</label>
