@@ -1,0 +1,57 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #F1ECE6;
+  /* 背景色を灰色に設定 */
+}
+
+header {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  /* h1要素の上下の余白を0に設定 */
+}
+
+header nav {
+  float: right;
+  /* ナビゲーションを右に配置 */
+  margin-top: -30px;
+  /* ナビゲーションの上部余白を設定 */
+}
+
+.login {
+  text-align: center;
+}
+
+.login-form {
+  background-color: white;
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 50px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"],
+.login-form input[type="submit"] {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.login-form input[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
