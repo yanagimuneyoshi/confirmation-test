@@ -8,6 +8,9 @@
 </head>
 
 <body>
+  <header>
+    <h1>FashionablyLate</h1>
+  </header>
   <div class="contact-form">
     <h2>Contact</h2>
     <form class="name" required>
