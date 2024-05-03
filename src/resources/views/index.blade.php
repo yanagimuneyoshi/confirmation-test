@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
   <meta charset="UTF-8">
@@ -60,7 +60,7 @@
     </form>
 
     <form action="submit">
-      <input button="submit-1" value="送信">
+      <button type="button" onclick="search()">検索</button>
     </form>
 </body>
 
