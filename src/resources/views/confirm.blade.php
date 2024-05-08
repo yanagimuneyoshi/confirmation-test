@@ -11,46 +11,46 @@
   <div class="container">
     <h1>FashionablyLate</h1>
     <h2>Confirm</h2>
-    <form>
+    <form action="/thanks" method="post">
+      @csrf
       <div class="form-group">
-        <label for="name">名前</label>
-        <input type="text" id="name" name="name">
+        <label for="name">お名前</label>
+        <input type="text" id="name" name="name" value="{{ $contact['first-name'] ?? '' }} {{ $contact['last-name'] ?? '' }}" readonly>
       </div>
       <div class="form-group">
-        <label for="phone">性別</label>
-        <input type="sex" id="sex" name="sex">
+        <label for="gender">性別</label>
+        <input type="text" id="gender" name="gender" value="{{ $contact['gender'] ?? '' }}" readonly>
       </div>
       <div class="form-group">
         <label for="email">メールアドレス</label>
-        <input type="email" id="email" name="email">
+        <input type="email" id="email" name="email" value="{{ $contact['email'] ?? '' }}" readonly>
       </div>
       <div class="form-group">
         <label for="phone">電話番号</label>
-        <input type="tel" id="phone" name="phone">
+        <input type="tel" id="phone" name="phone" value="{{ $contact['phone'] ?? '' }}" readonly>
       </div>
       <div class="form-group">
         <label for="address">住所</label>
-        <input type="text" id="address" name="address">
+        <input type="text" id="address" name="address" value="{{ $contact['address'] ?? '' }}" readonly>
       </div>
       <div class="form-group">
-        <label for="address">住所</label>
-        <input type="text" id="address" name="address">
+        <label for="inquiry-type">お問い合わせ種類</label>
+        <input type="text" id="inquiry-type" name="inquiry-type" value="{{ $contact['inquiry-type'] === 'delivery' ? '商品のお届けについて' : ($contact['inquiry-type'] === 'exchange' ? '商品の交換について' : ($contact['inquiry-type'] === 'trouble' ? '商品トラブル' : ($contact['inquiry-type'] === 'shop-inquiry' ? 'ショップへのお問い合わせ' : ($contact['inquiry-type'] === 'other' ? 'その他' : '')))) }}" readonly>
       </div>
       <div class="form-group">
-        <label for="order">お問い合わせの種類</label>
-        <textarea id="order" name="order"></textarea>
-      </div>
-      <div class="form-group">
-        <label for="reason">お問い合わせの理由</label>
-        <textarea id="reason" name="reason"></textarea>
+        <label for="message">お問い合わせ内容</label>
+        <textarea id="message" name="message" readonly>{{ $contact['message'] ?? '' }}</textarea>
       </div>
       <div class="form-group">
         <button type="submit">送信</button>
       </div>
-      <div class="form-group">
-        <button type="submit">リセット</button>
-      </div>
     </form>
+    <form class="reset" action="/">
+      <button type="button" onclick="window.history.back();">リセット</button>
+    </form>
+
+
 </body>
+
 
 </html>

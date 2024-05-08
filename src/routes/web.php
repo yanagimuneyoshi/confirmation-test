@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AllController;
+use App\Http\Controllers\AuthorController;
+use PharIo\Manifest\Author;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,10 +19,30 @@ use App\Http\Controllers\AllController;
 
 
 Route::get('/', [AllController::class, 'index']);
+Route::post('/', [AuthorController::class, 'index']);
+Route::post('/find', [AuthorController::class, 'search']);
+Route::get('/add', [AuthorController::class, 'add']);
+Route::post('/add', [AuthorController::class, 'create']);
+Route::get('/edit', [AuthorController::class, 'edit']);
+Route::post('/edit', [AuthorController::class, 'update']);
+Route::get('/delete', [AuthorController::class, 'delete']);
+Route::post('/delete', [AuthorController::class, 'remove']);
+Route::get('/verror', [AuthorController::class, 'verror']);
 
-Route::get('/confirm', [AllController::class, 'confirm']);
+
+
+
+
+
+
+
+// Route::get('/confirm', [AllController::class, 'confirm']);
+
+Route::post('/confirm', [AllController::class, 'confirm']);
+
 
 Route::get('/thanks', [AllController::class, 'thanks']);
+Route::post('/thanks', [AllController::class, 'thanks']);
 
 
 Route::get('/admin', [AllController::class, 'admin']);

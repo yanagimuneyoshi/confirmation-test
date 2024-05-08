@@ -13,7 +13,7 @@ class AuthorRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -28,7 +28,7 @@ class AuthorRequest extends FormRequest
             'first_name' => 'required', // 名を入力してください
             'gender' => 'required', // 性別
             'email' => 'required|email', // メールアドレス
-            'phone1' => 'required|min:0|max:5|', // 電話番号を入力してください
+            'phone1' => 'required|numeric', // 数字のみを許可, // 電話番号を入力してください
             'address' => 'required', // 住所
             'inquiry_type' => 'required', // お問い合わせの種類
             'message' => 'required|min:0|max:120', // お問い合わせ内容
@@ -50,5 +50,10 @@ class AuthorRequest extends FormRequest
             'message.required' => 'お問い合わせ内容を入力してください',
             'message.max' => 'お問合せ内容は120文字以内で入力してください',
         ];
+    }
+
+    protected function getRedirectUrl()
+    {
+        return 'verror';
     }
 }
