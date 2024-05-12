@@ -41,7 +41,7 @@ Route::get('/verror', [AuthorController::class, 'verror']);
 Route::post('/confirm', [AllController::class, 'confirm']);
 
 
-Route::get('/thanks', [AllController::class, 'thanks']);
+// Route::get('/thanks', [AllController::class, 'thanks']);
 Route::post('/thanks', [AllController::class, 'thanks']);
 
 

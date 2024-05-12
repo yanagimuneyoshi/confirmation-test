@@ -48,6 +48,11 @@
         <span>{{$errors->first('address')}}</span>
       </div>
       <div class="form-group">
+        <label for="building">建物名</label>
+        <input type="text" id="building" name="building" required placeholder="例：千駄ヶ谷マンション101">
+        <span>{{$errors->first('building')}}</span>
+      </div>
+      <div class="form-group">
         <label for="inquiry-type">お問い合わせ種類</label>
         <select id="inquiry-type" name="inquiry-type" required>
           <option value="" selected disabled>選択してください</option>

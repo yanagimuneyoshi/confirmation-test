@@ -34,6 +34,10 @@
         <input type="text" id="address" name="address" value="{{ $contact['address'] ?? '' }}" readonly>
       </div>
       <div class="form-group">
+        <label for="building">建物名</label>
+        <input type="text" id="building" name="building" value="{{ $contact['building'] ?? '' }}" >
+      </div>
+      <div class="form-group">
         <label for="inquiry-type">お問い合わせ種類</label>
         <input type="text" id="inquiry-type" name="inquiry-type" value="{{ $contact['inquiry-type'] === 'delivery' ? '商品のお届けについて' : ($contact['inquiry-type'] === 'exchange' ? '商品の交換について' : ($contact['inquiry-type'] === 'trouble' ? '商品トラブル' : ($contact['inquiry-type'] === 'shop-inquiry' ? 'ショップへのお問い合わせ' : ($contact['inquiry-type'] === 'other' ? 'その他' : '')))) }}" readonly>
       </div>

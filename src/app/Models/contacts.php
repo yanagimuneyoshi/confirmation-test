@@ -14,10 +14,10 @@ class contacts extends Model
         'last_name',
         'gender',
         'email',
-        'tell',
+        'phone',
         'address',
         'building',
-        'detail',
+        'message',
     ]; // ユーザーからの入力を許可するフィールドのリスト
 
 }
