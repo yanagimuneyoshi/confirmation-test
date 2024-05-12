@@ -17,14 +17,19 @@ class CreateContactsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('category_id')->nullable();
             $table->foreign('category_id')->references('id')->on('categories');
-            $table->string('first_name')->nullable();;
-            $table->string('last_name')->nullable();;
+            $table->string('first_name');
+            $table->string('last_name');
+            // $table->string('first-name')->default('');
+            // $table->string('last-name')->default('');
+            
+
             $table->string('gender')->comment('1:男性, 2:女性, 3:その他');
 
             $table->string('email', 255);
             $table->string('phone', 255)->nullable();
             $table->string('address', 255)->nullable();
             $table->string('building', 255)->nullable();
+            $table->string('inquiry-type')->default('');
             $table->text('message')->nullable();
             $table->timestamps();
         });

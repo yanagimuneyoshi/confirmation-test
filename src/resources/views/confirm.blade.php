@@ -15,7 +15,8 @@
       @csrf
       <div class="form-group">
         <label for="name">お名前</label>
-        <input type="text" id="name" name="name" value="{{ $contact['first-name'] ?? '' }} {{ $contact['last-name'] ?? '' }}" readonly>
+        <input type="text" id="first_name" name="first_name" value="{{ $contact['first_name'] }}" readonly>
+        <input type="text" id="last_name" name="last_name" value="{{ $contact['last_name'] }}" readonly>
       </div>
       <div class="form-group">
         <label for="gender">性別</label>
@@ -35,7 +36,7 @@
       </div>
       <div class="form-group">
         <label for="building">建物名</label>
-        <input type="text" id="building" name="building" value="{{ $contact['building'] ?? '' }}" >
+        <input type="text" id="building" name="building" value="{{ $contact['building'] ?? '' }}">
       </div>
       <div class="form-group">
         <label for="inquiry-type">お問い合わせ種類</label>

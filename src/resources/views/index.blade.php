@@ -17,12 +17,12 @@
       @csrf
       <div class="form-group">
         <label for="first-name">お名前（姓）</label>
-        <input type="text" id="first-name" name="first-name" placeholder="例　山田">
+        <input type="text" id="first_name" name="first_name" placeholder="例　山田">
         <span>{{$errors->first('first-name')}}</span>
       </div>
       <div class="form-group">
         <label for="last-name">お名前（名）</label>
-        <input type="text" id="last-name" name="last-name" placeholder="例　太郎">
+        <input type="text" id="last_name" name="last_name" placeholder="例　太郎">
         <span>{{$errors->first('last-name')}}</span>
       </div>
       <div class="form-group">

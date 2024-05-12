@@ -17,7 +17,7 @@ class AllController extends Controller
     public function confirm(Request $request)
     {
         // フォームからの入力を取得
-        $contact = $request->only(['first-name', 'last-name', 'gender', 'email', 'phone', 'address', 'building', 'inquiry-type', 'message']);
+        $contact = $request->only(['first_name', 'last_name', 'gender', 'email', 'phone', 'address', 'building', 'inquiry-type', 'message']);
 
 
         // // 性別の値を適切な形式に変換
@@ -29,7 +29,6 @@ class AllController extends Controller
         // } elseif ($gender === '3') {
         //     $contact['gender'] = 'その他';
         // }
-        
 
         // ビューにフォームデータを渡す
         return view('confirm')->with('contact', $contact);
@@ -40,9 +39,10 @@ class AllController extends Controller
     {
         // フォームからの入力を取得
         // フォームからの入力を取得
-        $contact = $request->only(['first-name', 'last-name', 'gender', 'email', 'phone', 'address', 'building', 'inquiry-type', 'message']);
+        $contact = $request->only(['first_name', 'last_name', 'gender', 'email', 'phone', 'address', 'building', 'inquiry-type', 'message']);
 
-
+        // $contact['first_name'] = $contact['first-name'] ;
+        // $contact['last_name'] = $contact['last-name'] ;
         // 性別の値を適切な形式に変換
         $gender = $contact['gender'];
         if ($gender === '男性') {
@@ -57,7 +57,7 @@ class AllController extends Controller
         Contacts::create($contact);
 
         // thanksビューを表示
-        return view('thanks');
+        return view('thanks', compact('contact'));
     }
 
     public function admin()
