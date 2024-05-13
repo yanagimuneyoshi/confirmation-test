@@ -48,7 +48,7 @@ Route::post('/thanks', [AllController::class, 'thanks']);
 Route::get('/admin', [AllController::class, 'admin']);
 
 
-Route::get('/register', [AllController::class, 'register']);
+Route::get('/register', [AuthorController::class, 'index']);
 
 
-Route::get('/login', [AllController::class, 'login']);
+Route::post('/login', [AuthorController::class, 'login']);

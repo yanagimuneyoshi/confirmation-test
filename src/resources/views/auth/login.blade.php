@@ -13,13 +13,17 @@
     <h1>FashionablyLate</h1>
     <nav>
       <a href="/register">登録</a>
+      <!-- <form class="reset" action="/register">
+        <button type="button" onclick="window.history.back();">登録</button>
+      </form> -->
     </nav>
   </header>
   <h2 class="login">Login</h2>
-  <form class="login-form">
-    <input type="text" name="email" placeholder="メールアドレス">
-    <input type="password" name="password" placeholder="パスワード">
-    <input type="submit" value="ログイン">
+  <form class="login-form" action="/admin" method="post">
+    @csrf
+      <input type="text" name="email" placeholder="メールアドレス">
+      <input type="password" name="password" placeholder="パスワード">
+      <input type="submit" value="ログイン">
   </form>
 </body>
 

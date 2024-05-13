@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ asset('css/register.css') }}">
   <title>Register</title>
 </head>
 
@@ -13,13 +14,16 @@
       <h1>FashionablyLate</h1>
       <button>Login</button>
     </div>
-    <form>
-      <h2>Register</h2>
-      <input type="text" placeholder="お名前" name="name" required>
-      <input type="text" placeholder="メールアドレス" name="email" required>
-      <input type="password" placeholder="パスワード" name="psw" required>
-      <input type="password" placeholder="パスワードの確認" name="psw-repeat" required>
-      <button type="submit">登録</button>
+    <form class="form" action="/login" method="post">
+      @csrf
+        <h2>Register</h2>
+        <label for="name">お名前</label>
+        <input type="text" name="name" value="{{ old('name') }}" />
+        <label for="mail">メールアドレス</label>
+        <input type="email" name="email" value="{{ old('email') }}" />
+        <label for="password">パスワード</label>
+        <input type="password" name="password" />
+        <button type="submit">登録</button>
     </form>
   </div>
 </body>
